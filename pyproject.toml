@@ -1,0 +1,30 @@
+[project]
+name = "skytracker"
+version = "0.1.0"
+description = "Курсовая работа: Система мониторинга самолетов (Авиатрекер)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+dependencies = [
+    "requests>=2.31.0",
+]
+
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+[tool.black]
+line-length = 119
+target-version = ['py310']
+
+[tool.isort]
+profile = "black"
+line_length = 119
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+
